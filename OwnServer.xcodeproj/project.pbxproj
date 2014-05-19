@@ -23,6 +23,8 @@
 		8549901A1925DAD400728DFA /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549900E1925DAD400728DFA /* SBJsonWriter.m */; };
 		8549901D1925F5A100728DFA /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549901C1925F5A100728DFA /* UsersViewController.m */; };
 		854990201925F60300728DFA /* SyncModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549901F1925F60300728DFA /* SyncModel.m */; };
+		854990231929D88300728DFA /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 854990211929D88300728DFA /* CoreModel.xcdatamodeld */; };
+		854990671929F1C200728DFA /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 854990661929F1C200728DFA /* UserData.m */; };
 		855EDDCC19061D9F0074B066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCB19061D9F0074B066 /* Foundation.framework */; };
 		855EDDCE19061D9F0074B066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCD19061D9F0074B066 /* CoreGraphics.framework */; };
 		855EDDD019061D9F0074B066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCF19061D9F0074B066 /* UIKit.framework */; };
@@ -92,6 +94,9 @@
 		8549901C1925F5A100728DFA /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		8549901E1925F60300728DFA /* SyncModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncModel.h; sourceTree = "<group>"; };
 		8549901F1925F60300728DFA /* SyncModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncModel.m; sourceTree = "<group>"; };
+		854990221929D88300728DFA /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
+		854990651929F1C200728DFA /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		854990661929F1C200728DFA /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		855EDDC819061D9F0074B066 /* OwnServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwnServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855EDDCB19061D9F0074B066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		855EDDCD19061D9F0074B066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -203,6 +208,9 @@
 		855EDDBF19061D9F0074B066 = {
 			isa = PBXGroup;
 			children = (
+				854990211929D88300728DFA /* CoreModel.xcdatamodeld */,
+				854990651929F1C200728DFA /* UserData.h */,
+				854990661929F1C200728DFA /* UserData.m */,
 				85498FF51925DA6A00728DFA /* Json */,
 				85498FF21924985700728DFA /* User.h */,
 				85498FF31924985700728DFA /* User.m */,
@@ -402,6 +410,7 @@
 				855EDE02190629FC0074B066 /* HomeModel.m in Sources */,
 				855EDE0519062A100074B066 /* Location.m in Sources */,
 				854990151925DAD400728DFA /* SBJsonStreamWriter.m in Sources */,
+				854990671929F1C200728DFA /* UserData.m in Sources */,
 				85498FF11921F2E900728DFA /* ServiceConnector.m in Sources */,
 				854990161925DAD400728DFA /* SBJsonStreamWriterAccumulator.m in Sources */,
 				855EDDE219061D9F0074B066 /* ViewController.m in Sources */,
@@ -409,6 +418,7 @@
 				854990201925F60300728DFA /* SyncModel.m in Sources */,
 				854990181925DAD400728DFA /* SBJsonTokeniser.m in Sources */,
 				8549901A1925DAD400728DFA /* SBJsonWriter.m in Sources */,
+				854990231929D88300728DFA /* CoreModel.xcdatamodeld in Sources */,
 				855EDDDC19061D9F0074B066 /* AppDelegate.m in Sources */,
 				85B206901907914700FAE584 /* RegisterViewController.m in Sources */,
 				854990101925DAD400728DFA /* SBJsonParser.m in Sources */,
@@ -634,6 +644,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		854990211929D88300728DFA /* CoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				854990221929D88300728DFA /* CoreModel.xcdatamodel */,
+			);
+			currentVersion = 854990221929D88300728DFA /* CoreModel.xcdatamodel */;
+			path = CoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 855EDDC019061D9F0074B066 /* Project object */;
 }
