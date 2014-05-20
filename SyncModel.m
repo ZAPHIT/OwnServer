@@ -22,7 +22,7 @@
 
 -(void)downloadItems{
     //download the json file
-    NSURL *jsonFileUrl =[NSURL URLWithString:@"http://zamperla.ph/ZamperlaApp/services.php"];
+    NSURL *jsonFileUrl =[NSURL URLWithString:@"http://zamperla.ph/ZamperlaApp/User.php"];
     
     //Create the request
     NSURLRequest *urlRequest =[[NSURLRequest alloc] initWithURL:jsonFileUrl];

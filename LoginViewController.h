@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ServiceConnector.h"
 #import "SBJson.h"
+#import "CoreViewController.h"
 
 @interface LoginViewController : UIViewController<UIAlertViewDelegate,ServiceConnectorDelegate>{
     UIAlertView *alert;

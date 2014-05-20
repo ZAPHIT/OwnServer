@@ -1,19 +1,18 @@
 //
-//  UsersViewController.m
+//  CoreTwoViewController.m
 //  OwnServer
 //
-//  Created by Joey Serquina on 5/16/14.
+//  Created by Joey Serquina on 5/20/14.
 //  Copyright (c) 2014 sample. All rights reserved.
 //
 
-#import "UsersViewController.h"
+#import "CoreTwoViewController.h"
 
-@interface UsersViewController ()
+@interface CoreTwoViewController ()
 
 @end
 
-@implementation UsersViewController
-@synthesize labels;
+@implementation CoreTwoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
     // Do any additional setup after loading the view.
 }
 

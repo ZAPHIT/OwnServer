@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UsersViewController : UIViewController
+
+@interface UsersViewController : UIViewController{
+    
+    
+}
+@property (nonatomic, strong)IBOutlet UILabel *myLabel;
+@property (nonatomic, strong)NSString *labels;
+
 
 @end

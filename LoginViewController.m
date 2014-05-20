@@ -207,10 +207,10 @@
     [complete dismissWithClickedButtonIndex:0 animated:YES];
     [alert dismissWithClickedButtonIndex:0 animated:YES];
     
-    
+    CoreViewController *fView =[self.storyboard instantiateViewControllerWithIdentifier:@"CoreViewController"];
     ViewController *firstView =[self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
     
-    [self.navigationController pushViewController:firstView animated:YES];
+    [self.navigationController pushViewController:fView animated:YES];
     
 }
 

@@ -2,7 +2,7 @@
 //  User.h
 //  OwnServer
 //
-//  Created by Joey Serquina on 5/15/14.
+//  Created by Joey Serquina on 5/20/14.
 //  Copyright (c) 2014 sample. All rights reserved.
 //
 
@@ -10,12 +10,11 @@
 
 @interface User : NSObject
 
-
-@property (nonatomic, strong) NSString *firstname;
-@property (nonatomic, strong) NSString *lastname;
-@property (nonatomic, strong) NSString *username;
-@property (nonatomic, strong) NSString *emailAddress;
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, retain) NSString * emailAddress;
+@property (nonatomic, retain) NSString * firstname;
+@property (nonatomic, retain) NSString * lastname;
+@property (nonatomic, retain) NSString * password;
+@property (nonatomic, retain) NSString * username;
 
 
 @end

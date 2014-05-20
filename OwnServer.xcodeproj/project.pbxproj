@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		85498FF11921F2E900728DFA /* ServiceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 85498FF01921F2E900728DFA /* ServiceConnector.m */; };
-		85498FF41924985700728DFA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 85498FF31924985700728DFA /* User.m */; };
 		8549900F1925DAD400728DFA /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 85498FF71925DAD300728DFA /* NSObject+SBJson.m */; };
 		854990101925DAD400728DFA /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 85498FFA1925DAD300728DFA /* SBJsonParser.m */; };
 		854990111925DAD400728DFA /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 85498FFC1925DAD300728DFA /* SBJsonStreamParser.m */; };
@@ -25,6 +24,9 @@
 		854990201925F60300728DFA /* SyncModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549901F1925F60300728DFA /* SyncModel.m */; };
 		854990231929D88300728DFA /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 854990211929D88300728DFA /* CoreModel.xcdatamodeld */; };
 		854990671929F1C200728DFA /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 854990661929F1C200728DFA /* UserData.m */; };
+		8549906D192B056900728DFA /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549906C192B056900728DFA /* CoreViewController.m */; };
+		85499070192B4F4200728DFA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549906F192B4F4200728DFA /* User.m */; };
+		85499073192B571A00728DFA /* CoreTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85499072192B571A00728DFA /* CoreTwoViewController.m */; };
 		855EDDCC19061D9F0074B066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCB19061D9F0074B066 /* Foundation.framework */; };
 		855EDDCE19061D9F0074B066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCD19061D9F0074B066 /* CoreGraphics.framework */; };
 		855EDDD019061D9F0074B066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCF19061D9F0074B066 /* UIKit.framework */; };
@@ -63,8 +65,6 @@
 		85498FEC1921F2A300728DFA /* JSONDictionaryExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONDictionaryExtensions.h; sourceTree = "<group>"; };
 		85498FEF1921F2E900728DFA /* ServiceConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceConnector.h; sourceTree = "<group>"; };
 		85498FF01921F2E900728DFA /* ServiceConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConnector.m; sourceTree = "<group>"; };
-		85498FF21924985700728DFA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		85498FF31924985700728DFA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		85498FF61925DAD300728DFA /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		85498FF71925DAD300728DFA /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		85498FF81925DAD300728DFA /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -97,6 +97,12 @@
 		854990221929D88300728DFA /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
 		854990651929F1C200728DFA /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		854990661929F1C200728DFA /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		8549906B192B056900728DFA /* CoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
+		8549906C192B056900728DFA /* CoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		8549906E192B4F4200728DFA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8549906F192B4F4200728DFA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		85499071192B571A00728DFA /* CoreTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTwoViewController.h; sourceTree = "<group>"; };
+		85499072192B571A00728DFA /* CoreTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTwoViewController.m; sourceTree = "<group>"; };
 		855EDDC819061D9F0074B066 /* OwnServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwnServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855EDDCB19061D9F0074B066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		855EDDCD19061D9F0074B066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -208,12 +214,16 @@
 		855EDDBF19061D9F0074B066 = {
 			isa = PBXGroup;
 			children = (
+				85499071192B571A00728DFA /* CoreTwoViewController.h */,
+				85499072192B571A00728DFA /* CoreTwoViewController.m */,
+				8549906E192B4F4200728DFA /* User.h */,
+				8549906F192B4F4200728DFA /* User.m */,
+				8549906B192B056900728DFA /* CoreViewController.h */,
+				8549906C192B056900728DFA /* CoreViewController.m */,
 				854990211929D88300728DFA /* CoreModel.xcdatamodeld */,
 				854990651929F1C200728DFA /* UserData.h */,
 				854990661929F1C200728DFA /* UserData.m */,
 				85498FF51925DA6A00728DFA /* Json */,
-				85498FF21924985700728DFA /* User.h */,
-				85498FF31924985700728DFA /* User.m */,
 				8549901E1925F60300728DFA /* SyncModel.h */,
 				8549901F1925F60300728DFA /* SyncModel.m */,
 				8549901B1925F5A100728DFA /* UsersViewController.h */,
@@ -403,12 +413,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				854990171925DAD400728DFA /* SBJsonStreamWriterState.m in Sources */,
+				8549906D192B056900728DFA /* CoreViewController.m in Sources */,
+				85499070192B4F4200728DFA /* User.m in Sources */,
 				854990111925DAD400728DFA /* SBJsonStreamParser.m in Sources */,
-				85498FF41924985700728DFA /* User.m in Sources */,
 				8549900F1925DAD400728DFA /* NSObject+SBJson.m in Sources */,
 				85B206931907915200FAE584 /* LoginViewController.m in Sources */,
 				855EDE02190629FC0074B066 /* HomeModel.m in Sources */,
 				855EDE0519062A100074B066 /* Location.m in Sources */,
+				85499073192B571A00728DFA /* CoreTwoViewController.m in Sources */,
 				854990151925DAD400728DFA /* SBJsonStreamWriter.m in Sources */,
 				854990671929F1C200728DFA /* UserData.m in Sources */,
 				85498FF11921F2E900728DFA /* ServiceConnector.m in Sources */,
