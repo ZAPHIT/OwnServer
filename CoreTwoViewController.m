@@ -22,6 +22,7 @@
 }
 
 @property (strong, nonatomic)NSMutableArray *__firstname;
+@property (strong, nonatomic)NSMutableArray *noMatchArray;
 
 @end
 
@@ -42,6 +43,7 @@
     // Do any additional setup after loading the view.
     
     ___firstname = [[NSMutableArray alloc]init];
+    _noMatchArray = [[NSMutableArray alloc]init];
     
     //create array object and assign it to _feedItems variable
     _feedItems =[[NSArray alloc]init];
@@ -57,15 +59,17 @@
     
     
     
-    NSLog(@"%lu",(unsigned long)[_feedItems count ]);
+
+    
+    
+    
+    NSLog(@"download count  %lu",(unsigned long)[_feedItems count]);
     
     _addUser =[[NSMutableArray alloc]init];
     
-    
+    NSLog(@"addusercount %lu",(unsigned long)[_addUser count]);
     [self refreshTableView];
     
-        
-        
     }
     
 -(void)itemsDownloaded:(NSArray *)items{
@@ -103,8 +107,8 @@
         
         if (objects.count >0) {
             [_addUser addObjectsFromArray:objects];
-            NSLog(@"%lu",(unsigned long)[objects count]);
-            NSLog(@" feed items  %lu",(unsigned long)[_feedItems count]);
+            NSLog(@"CoreData count %lu",(unsigned long)[objects count]);
+            //NSLog(@" DownloadData count  %lu",(unsigned long)[_feedItems count]);
             
             [self.coreTable reloadData];
             
@@ -137,32 +141,113 @@
 
 - (IBAction)add:(UIBarButtonItem *)sender {
     
+    NSString *holder;
+    NSString *coreHolder;
+    //NSString *outsideHolder;
+   // [self refreshTableView];
     
     
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    UserData *newUserData  =[NSEntityDescription insertNewObjectForEntityForName:@"UserData" inManagedObjectContext:appDelegate.managedObjectContext];
-    
-    User *items;
-    
-    
-    if (_feedItems > 0)
+    if (_addUser.count > 0) {
+        
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        UserData *newUserData  =[NSEntityDescription insertNewObjectForEntityForName:@"UserData" inManagedObjectContext:appDelegate.managedObjectContext];
+        User *items;
+        NSString *sqlItems;
+        NSMutableArray *downloadItem = [[NSMutableArray alloc]init];
+        NSString *testHolder;
+        int trigger =1;
+        int loopcount = 0;
+        
+        for (int y =0; y < [_feedItems count]; y++)
             {
-
-    //newUserData.firstname = @"zamperla";
-    //newUserData.lastname =@"zamperla";
+                loopcount = (int)[_feedItems count] -1;
+                sqlItems = _feedItems[y];
+                NSLog(@"%lu",(unsigned long)[_feedItems count]);
+                NSLog(@"triggerData %d",trigger);
+                
+            
+                        NSLog(@"downloaditem %@ index%d",[sqlItems valueForKeyPath:@"firstname"],y);
+                        testHolder = [sqlItems valueForKeyPath:@"firstname"];
+                        NSLog(@"from sql to compare>> %@",testHolder);
+                
+                        for (int z =0; z < [_addUser count]; z++)
+                        {   items = _addUser[z];
+                            coreHolder = [items valueForKeyPath:@"firstname"];
+                            NSLog(@"coreDataItem comparison>> %@",coreHolder);
+               
+                                if ([testHolder isEqualToString:coreHolder])
+                                {   NSLog(@"Match Data");
+                                    trigger = 1;
+                                    z = (int)_addUser.count;
+                                }
+                                else
+                                {   NSLog(@"No Match Data");
+                                    trigger = 0;
+                                }
+                        }
+                
+                if (trigger == 0 )
+                {
+                    [downloadItem addObject:[sqlItems valueForKeyPath:@"firstname"]];
+                    NSLog(@"new data in array %@",downloadItem);
+                    NSLog(@"Stop search");
+                }
+                else
+                {
+                    if (y == loopcount) {
+                        NSLog(@"there is no new data outside exist");
+                        
+                        }
+                    else{
+                        
+                        }
+                    
+                    
+                
+                }
+                
+                    
+        }
+        NSLog(@"user core count %lu",(unsigned long) [_addUser count]);
+        
+    }
+    
+    
+    else{
+        NSLog(@"No Core Data exist");
+    
+                if (_feedItems > 0)
+                {
+                
+                //test to add data manually
+                //newUserData.firstname = @"zamperla";
+                //newUserData.lastname =@"zamperla";
                 
                 for (int i = 0; i < [_feedItems count]; i++) {
+                    
+                    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                    
+                    UserData *newUserData  =[NSEntityDescription insertNewObjectForEntityForName:@"UserData" inManagedObjectContext:appDelegate.managedObjectContext];
+                    
+                    User *items;
+                    
+                    
+                    
                     items = _feedItems[i];
                     
                     
-                    NSLog(@"%@", items.firstname);
                     [___firstname addObject:[items valueForKeyPath:@"firstname"]];
-                    NSLog(@" __firsntame %@",___firstname);
-//                    newUserData.firstname = items.firstname;
+                    NSLog(@" Core Items %@",___firstname);
+                    NSLog(@"index %d",i);
+                    NSLog(@"%@",[items valueForKeyPath:@"firstname"]);
+                    holder = [items valueForKeyPath:@"firstname"];
+                    NSLog(@" holder%@",holder);
+                    newUserData.firstname = holder;
 //                    newUserData.lastname = items.firstname;
-                }
+                    [appDelegate saveContext];
+                    [_addUser removeAllObjects];
+                    [self   refreshTableView];
+                    }
                 
                 
 //                for (int x = 0;  x < [___firstname count]; x++) {
@@ -171,16 +256,16 @@
 //                    NSLog(@" matches %@",_matches);
 //                }
     
-    [appDelegate saveContext];
-    [_addUser removeAllObjects];
-    [self   refreshTableView];
+
     
-            }
+                }
     
-    else    {
+        else    {
         
         NSLog(@"No data from web");
             }
+
+    }
 
 
 }
