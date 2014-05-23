@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreViewController.h"
+#import "SyncModel.h"
+#import "User.h"
 
-@interface CoreTwoViewController : UIViewController
+
+@interface CoreTwoViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,SyncModelProtocol>
+{
+    
+}
+@property (nonatomic,strong)NSMutableArray *addUser;
+@property (nonatomic,strong)IBOutlet UITableView *coreTable;
+@property (nonatomic,strong) User *selectedUser;
+@property (nonatomic,strong) NSString *matches;
 
 @end

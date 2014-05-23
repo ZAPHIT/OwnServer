@@ -27,6 +27,7 @@
 		8549906D192B056900728DFA /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549906C192B056900728DFA /* CoreViewController.m */; };
 		85499070192B4F4200728DFA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549906F192B4F4200728DFA /* User.m */; };
 		85499073192B571A00728DFA /* CoreTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85499072192B571A00728DFA /* CoreTwoViewController.m */; };
+		8549907C192CA43600728DFA /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549907B192CA43600728DFA /* UserCell.m */; };
 		855EDDCC19061D9F0074B066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCB19061D9F0074B066 /* Foundation.framework */; };
 		855EDDCE19061D9F0074B066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCD19061D9F0074B066 /* CoreGraphics.framework */; };
 		855EDDD019061D9F0074B066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EDDCF19061D9F0074B066 /* UIKit.framework */; };
@@ -103,6 +104,8 @@
 		8549906F192B4F4200728DFA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		85499071192B571A00728DFA /* CoreTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTwoViewController.h; sourceTree = "<group>"; };
 		85499072192B571A00728DFA /* CoreTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTwoViewController.m; sourceTree = "<group>"; };
+		8549907A192CA43600728DFA /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		8549907B192CA43600728DFA /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		855EDDC819061D9F0074B066 /* OwnServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OwnServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855EDDCB19061D9F0074B066 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		855EDDCD19061D9F0074B066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,6 +217,8 @@
 		855EDDBF19061D9F0074B066 = {
 			isa = PBXGroup;
 			children = (
+				8549907A192CA43600728DFA /* UserCell.h */,
+				8549907B192CA43600728DFA /* UserCell.m */,
 				85499071192B571A00728DFA /* CoreTwoViewController.h */,
 				85499072192B571A00728DFA /* CoreTwoViewController.m */,
 				8549906E192B4F4200728DFA /* User.h */,
@@ -423,6 +428,7 @@
 				85499073192B571A00728DFA /* CoreTwoViewController.m in Sources */,
 				854990151925DAD400728DFA /* SBJsonStreamWriter.m in Sources */,
 				854990671929F1C200728DFA /* UserData.m in Sources */,
+				8549907C192CA43600728DFA /* UserCell.m in Sources */,
 				85498FF11921F2E900728DFA /* ServiceConnector.m in Sources */,
 				854990161925DAD400728DFA /* SBJsonStreamWriterAccumulator.m in Sources */,
 				855EDDE219061D9F0074B066 /* ViewController.m in Sources */,
